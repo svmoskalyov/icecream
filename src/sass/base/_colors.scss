@@ -1,0 +1,19 @@
+$colors: (
+  'bg-body': #84a178,
+  'default': #f8d24e,
+  'accent': #0a8817,
+  'active': #ababab,
+  'text-primary': #fcfcfc,
+  'text-secondory': #131313,
+  'text-time': #ababab,
+  'text-copyright': #afb1b8,
+  'text-black': #000,
+  'text-white': #fff,
+  'cream': #aec6a5,
+  'coffee': #efd478,
+  'milkshakes': #d6936d,
+);
+
+@function getColor($key) {
+  @return map-get($colors, $key);
+}
