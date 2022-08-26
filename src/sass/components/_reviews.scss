@@ -21,6 +21,32 @@
             background-image: url(../images/icecream-bcg-2x.png);
         }
     }
+    @media screen and (min-width:$tablet) {
+        max-width: $tablet;
+        padding-top: 300px;
+        padding-bottom: 350px;
+        background-position: 0 320px, 0 0;
+        background-size: contain;
+        background-image: url(../images/icecream-bcg-tablet.png),
+                linear-gradient(to bottom, #84a178 150px, #f5f5f5 150px, #f5f5f5 100%);
+        
+            @media (min-resolurion: 2dppx) {
+                background-image: url(../images/icecream-bcg-tablet-2x.png);
+            }
+    }
+        @media screen and (min-width:$desktop) {
+            max-width: $desktop;
+            padding-top: 300px;
+            padding-bottom: 320px;
+            background-position: 0 80px, 0 0;
+            background-size: cover;
+            background-image: url(../images/icecream-bcg-desktop.png),
+                linear-gradient(to bottom, #84a178 80px, #f5f5f5 80px, #f5f5f5 100%);
+    
+            @media (min-resolurion: 2dppx) {
+                background-image: url(../images/icecream-bcg-desktop-2x.png);
+            }
+        }
 }
 
 .reviews__slider {
@@ -32,27 +58,48 @@
 .reviews__box {
     max-width: 280px;
     margin: 0 auto;
+    @media screen and (min-width:$tablet) {
+            max-width: 100%;
+        }
 }
 
 .reviews__icon {
     margin: 0 auto;
     margin-bottom: 32px;
+    @media screen and (min-width:$tablet) {
+        margin-top: 150px;
+        margin-bottom: 28px;
+    }
+        @media screen and (min-width:$desktop) {
+            margin-top: 290px;
+            margin-bottom: 28px;
+        }
 }
 
 .reviews__client {
     max-width: 280px;
     border-radius: 10px;
     background-color: #84a178;
-    font-weight: 400;
-    font-size: 12px;
-    line-height: 2.55;
+    @include itemTypography(400, 12px, 2.55);
     padding: 40px 60px;
     text-align: center;
-    background-image: url(../images/Group.png);
+
+    @media screen and (max-width:$tablet) {background-image: url(../images/Group.png);
     background-repeat: no-repeat;
     background-position-x: center;
     background-position-y: 65%;
-
+    }
+        @media screen and (min-width:$tablet) {
+            max-width: 100%;
+            border-radius: 24px;
+            @include itemTypography(500, 14px, 1.86);
+            padding: 28px 80px;
+        }
+                 @media screen and (min-width:$desktop) {
+                     @include itemTypography(500, 16px, 1.86);
+                     padding: 45px 109px;
+                 }
+    
     &--first {
 
     }
@@ -67,13 +114,16 @@
 }
 
 .reviews__name {
-    color: black;
-    font-weight: 500;
-    font-size: 20px;
-    line-height: 1.86;
+    color: #000;
+    @include itemTypography(500, 20px, 1.86);
+
     display: block;
     text-align: center;
     margin-top: 32px;
+    margin-bottom: 20px;
+    @media screen and (min-width:$desktop) {
+        margin-bottom: 32px;
+    }
 }
 
 .reviews__button {
@@ -92,7 +142,9 @@
     margin-right: 13px;
     cursor: pointer;
 }
-
+.reviews__dots--first {
+background-color: #84a178;
+}
 .reviews__dots--third {
     margin-right: 0;
 }
