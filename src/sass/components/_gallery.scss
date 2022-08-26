@@ -1,25 +1,23 @@
-.gallery {
-background-image: linear-gradient(
-    to bottom,
-    #84a178 24px,
-    #e1e1e1 24px,
-    #e1e1e1 100%
-);
-}
-.gallery__container {
-    height: 1230px;
-    background-repeat: no-repeat;
-    background-position: top;
-    background-size: contain;  
+// .gallery {
 
-   @media screen and (max-width:767px) {
-    background-image: url(../images/icecream-bcg.png);
-    @media (min-resolurion: 2dppx) {
-        background-image: url(../images/icecream-bcg-2x.png)
-    }   
-   } 
+// }
+.gallery__container {
+    position: relative;
+    // height: 1230px;
+ 
+
+ 
+//    } 
 }
 .gallery__picture {
+    padding-left: 20px;
+    padding-right: 20px;
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
-    top: -24px;
 }
+
+
+
+
