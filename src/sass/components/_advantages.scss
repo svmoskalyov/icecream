@@ -2,7 +2,7 @@
     padding-top: 40px;
     padding-bottom: 40px;
 
-    @media screen and (min-widht:1200px) {
+    @media screen and (min-widht:$desktop) {
         padding-top: 32px;
         padding-bottom: 114px;
     }
@@ -17,14 +17,14 @@
     @extend %visually-hidden;
 }
 .advantages__list {
-    @media screen and (max-width:768px) {
+    @media screen and (max-width:$tablet) {
         max-width: 230px;}
-    @media screen and (min-width:768px) {
+    @media screen and (min-width:$tablet) {
         width: 520px;
         display: flex;
         justify-content: space-between;            
     }
-    @media screen and (min-width:1200px) {
+    @media screen and (min-width:$desktop) {
         width: 1090px;
         margin: 0 auto;
     }
@@ -37,8 +37,8 @@
         height: 50px;
         margin-bottom: 16px;
         background-repeat: no-repeat;
-        @media screen and (min-width:768px) {margin-bottom: 32px;}
-        @media screen and (min-width:1200px) { margin-bottom: 40px;}
+        @media screen and (min-width:$tablet) {margin-bottom: 32px;}
+        @media screen and (min-width:$desktop) { margin-bottom: 40px;}
 
         
     }
@@ -47,10 +47,10 @@
     &--weight::before {background-image: url(../images/icon-weight.png);}
     &--ice::before {background-image: url(../images/icon-ice.png);}   
 
-        @media screen and (min-width:768px) {
+        @media screen and (min-width:$tablet) {
             margin-right: 32px;
         }
-        @media screen and (min-width:1200px) {
+        @media screen and (min-width:$desktop) {
             margin-right: 92px;
         }
 }
@@ -59,28 +59,28 @@
     @include itemTypography(700, 36px, 1.16);
     margin-bottom: 28px;
     
-    @media screen and (min-width:768px) {
+    @media screen and (min-width:$tablet) {
         @include itemTypography(700, 48px, 1.22);
         margin-bottom: 16px;
     }
-    @media screen and (min-widht:1200px) {           
+    @media screen and (min-widht:$desktop) {           
         @include itemTypography(700, 58px, 1.22);
     }
 }
 .advantages__text {
     @include itemTypography(700, 12px, 1.7);
    
-    @media screen and (max-width:767px) {
+    @media screen and (max-width:$tablet) {
     .advantages__item:not(:last-child) & {
         margin-bottom: 30px;
     }}
     
-    @media screen and (min-width:768px) {
+    @media screen and (min-width:$tablet) {
         margin-bottom: 0;
         @include itemTypography(400, 14px, 1.74);
     }
 
-    @media screen and (min-widht:1200px) {
+    @media screen and (min-widht:$desktop) {
         @include itemTypography(400, 16px, 1.76);
     }
 }
