@@ -23,5 +23,11 @@
 <symbol id="vector-i" viewBox="0 0 22 32">
 <path fill="none" stroke="#fcfcfc" style="stroke: var(--color2, #fcfcfc)" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="4" stroke-width="6.4" d="M6.166 3.795l12.832 12.218-12.832 12.221"></path>
 </symbol>
+<symbol id="btnbig" viewBox="0 0 19 32">
+<path stroke-linejoin="round" stroke-linecap="round" stroke-width="6.4" d="M3.2 3.2 16 16 3.2 28.8"/></symbol>
+<symbol id="burger" viewBox="0 0 50 32">
+<path fill="none" stroke="var(--color1, #fff)" stroke-linecap="round" stroke-width="4.571" d="M2.286 2.286H48M2.286 16H48M2.286 29.714H48"/></symbol>
+<symbol id="close" viewBox="0 0 32 32">
+<path fill="var(--color1, #fff)" d="M23.884 6.706 16 14.59 8.116 6.706a.995.995 0 0 0-1.38.031 1 1 0 0 0-.031 1.38l7.88 7.884-7.882 7.882a1.002 1.002 0 0 0-.018 1.427.998.998 0 0 0 1.427-.015l7.886-7.882 7.884 7.884a1 1 0 0 0 1.38-.03 1 1 0 0 0 .03-1.38l-7.884-7.884 7.884-7.886a1.002 1.002 0 0 0 .018-1.427.998.998 0 0 0-1.427.015v.002z"/></symbol>
 </defs>
 </svg>
