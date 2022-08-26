@@ -1,0 +1,39 @@
+.advantages {
+    padding-top: 40px;
+    padding-bottom: 34px;
+}
+.advantages__container {
+    width: 100%;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.advantages__title {
+    @extend %visually-hidden;
+}
+.advantages__item {
+    &::before {
+        content: '';
+        display: block;
+        width: 50px;
+        height: 50px;
+        margin-bottom: 16px;
+        background-repeat: no-repeat;
+    }
+
+    &--cow::before {background-image: url(../images/icon-cow.png);}
+    &--weight::before {background-image: url(../images/icon-weight.png);}
+    &--ice::before {background-image: url(../images/icon-ice.png);}
+}
+.advantages__list {
+    max-width: 230px;
+}
+.advantages__name {
+    @include itemTypography(700, 36px, 1.16);
+    margin-bottom: 28px;
+}
+.advantages__text {
+    @include itemTypography(700, 12px, 1.7);
+    margin-bottom: 30px;
+}
+
