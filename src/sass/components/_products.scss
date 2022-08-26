@@ -1,8 +1,15 @@
 .products {
-  padding: 60px 0;
+  padding-top: 60px;
+  padding-left: 0;
+  padding-right: 0;
+  padding-bottom: 80px;
   background-color: white;
-  background-image: url(/src/images/Мороженое\ фон.png);
+  background-image: url(/src/images/Мороженое\ фон-mob.png);
   @media screen and (min-width: $tablet) {
+    background-image: url(/src/images/Мороженое\ фон\ tab.png);
+  }
+  @media screen and (min-width: $desktop) {
+    background-image: url(/src/images/Мороженое\ фон.png);
   }
 }
 
@@ -14,6 +21,9 @@
   text-transform: uppercase;
   color: #000000;
   margin-bottom: 12px;
+  @media screen and (min-width: $tablet) {
+    font-size: 22px;
+  }
 }
 
 .products__title {
@@ -25,6 +35,19 @@
   letter-spacing: 0.04em;
   text-transform: uppercase;
   color: #000000;
+  @media screen and (min-width: $tablet) {
+    font-size: 34px;
+  }
+}
+
+.products__list {
+  @media screen and (min-width: $tablet) {
+    display: flex;
+    margin-right: 16px;
+    &:last-child {
+      margin-right: 0;
+    }
+  }
 }
 
 .products__item {
@@ -38,6 +61,17 @@
   padding-right: 40px;
   position: relative;
   margin-top: 148px;
+  @media screen and (min-width: $tablet) {
+    width: 224px;
+    height: 428px;
+    margin-top: 200px;
+    padding-left: 26px;
+    padding-right: 26px;
+    margin-right: 16px;
+    &:last-child {
+      margin-right: 0;
+    }
+  }
 }
 .ice-coffee {
   background-color: #efd478;
@@ -93,6 +127,9 @@
   text-transform: uppercase;
   color: #131313;
   margin-bottom: 40px;
+  @media screen and (min-width: $tablet) {
+    font-size: 22px;
+  }
 }
 .products__item--text {
   font-weight: 400;
