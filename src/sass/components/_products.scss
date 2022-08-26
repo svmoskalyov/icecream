@@ -1,0 +1,61 @@
+.products {
+  background-color: white;
+  background-image: url(/src/images/Мороженое\ фон.png);
+}
+.products__text {
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 1.2;
+  text-align: center;
+  text-transform: uppercase;
+  color: #000000;
+  margin-bottom: 12px;
+}
+.products__title {
+  font-family: 'Seymour One';
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 1.26;
+  text-align: center;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #000000;
+  position: relative;
+  margin-bottom: 40px;
+}
+.products__item::before {
+  content: url('../images/products_mobile/капучіно1х.png');
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+
+  position: absolute;
+  display: block;
+  border: transparent;
+}
+.products__item {
+  margin: 0 auto;
+  width: 280px;
+  height: 420px;
+  background: #aec6a5;
+  border-radius: 24px;
+  margin-bottom: 40px;
+  padding: 123px 40px;
+}
+
+.products__item--title {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.2;
+  text-align: center;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #131313;
+  margin-bottom: 40px;
+}
+.products__item--text {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.76;
+  text-align: center;
+  letter-spacing: 0.04em;
+  color: #131313;
+}
