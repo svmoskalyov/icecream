@@ -21,16 +21,10 @@
   letter-spacing: 0.04em;
   text-transform: uppercase;
   color: #000000;
-  position: relative;
+
   margin-bottom: 40px;
 }
-.products__item::before {
-  content: url('../images/products_mobile/капучіно1х.png');
-  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-  position: absolute;
-  display: inline-block;
-  border: transparent;
-}
+
 .products__item {
   margin: 0 auto;
   width: 280px;
@@ -39,6 +33,29 @@
   border-radius: 24px;
   margin-bottom: 40px;
   padding: 123px 40px;
+  position: relative;
+}
+
+.products__item.ice-cream::before {
+  content: url('/src/images/products_mobile/морозиво1х.png');
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  position: absolute;
+  display: inline-block;
+  top: 0;
+}
+.products__item.ice-coffee::before {
+  content: url('/src/images/products_mobile/капучіно1х.png');
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  position: absolute;
+  display: inline-block;
+  top: 0;
+}
+.products__item.milkshakes::before {
+  content: url('/src/images/products_mobile/стакан1х.png');
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  position: absolute;
+  display: inline-block;
+  top: 0;
 }
 
 .products__item--title {
