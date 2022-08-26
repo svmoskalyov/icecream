@@ -13,7 +13,7 @@
     background-position: top;
     background-size: cover;
 
-    @media screen and (max-width: 767px) {
+    @media screen and (max-width: $tablet) {
         background-image: url(../images/icecream-bcg.png),
             linear-gradient(to bottom, #84a178 24px, #f5f5f5 24px, #f5f5f5 100%);
 
@@ -48,8 +48,14 @@
     line-height: 2.55;
     padding: 40px 60px;
     text-align: center;
+    background-image: url(../images/Group.png);
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: 65%;
 
-    &--first {}
+    &--first {
+
+    }
 
     &--second {
         @extend %visually-hidden;
