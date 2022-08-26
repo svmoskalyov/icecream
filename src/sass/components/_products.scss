@@ -61,7 +61,10 @@
   height: 420px;
   background: #aec6a5;
   border-radius: 24px;
-  padding: 0 40px;
+  // padding: 0 40px;
+  padding-top: 1px;
+  padding-left: 40px;
+  padding-right: 40px;
   position: relative;
   margin-top: 148px;
   @media screen and (min-width: $tablet) {
