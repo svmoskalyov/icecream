@@ -10,6 +10,7 @@
   }
   @media screen and (min-width: $desktop) {
     background-image: url(/src/images/Мороженое\ фон.png);
+    padding-bottom: 66px;
   }
 }
 
@@ -24,6 +25,10 @@
   @media screen and (min-width: $tablet) {
     font-size: 22px;
   }
+  @media screen and (min-width: $desktop) {
+    font-size: 30px;
+    letter-spacing: 0.04em;
+  }
 }
 
 .products__title {
@@ -37,6 +42,10 @@
   color: #000000;
   @media screen and (min-width: $tablet) {
     font-size: 34px;
+  }
+  @media screen and (min-width: $desktop) {
+    font-size: 36px;
+    letter-spacing: 0.06em;
   }
 }
 
@@ -56,18 +65,25 @@
   height: 420px;
   background: #aec6a5;
   border-radius: 24px;
-  padding-top: 106px;
-  padding-left: 40px;
-  padding-right: 40px;
+  padding: 0 40px;
   position: relative;
   margin-top: 148px;
   @media screen and (min-width: $tablet) {
     width: 224px;
     height: 428px;
     margin-top: 200px;
-    padding-left: 26px;
-    padding-right: 26px;
     margin-right: 16px;
+    padding: 0 26px;
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+  @media screen and (min-width: $desktop) {
+    width: 368px;
+    height: 535px;
+    margin-top: 303px;
+    margin-right: 32px;
+    padding: 0 64px;
     &:last-child {
       margin-right: 0;
     }
@@ -84,14 +100,22 @@
 .products__item.ice-cream::before {
   content: '';
   width: 200px;
+  height: 200px;
   background-size: cover;
   background-repeat: no-repeat;
-  height: 200px;
   background-image: url('/src/images/products_mobile/ice_cream.png');
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
   position: absolute;
   display: inline-block;
   top: -106px;
+  @media screen and (min-width: $tablet) {
+  }
+  @media screen and (min-width: $desktop) {
+    background-image: url('/src/images/products_desktop/ice-cream_desk.png');
+    width: 300px;
+    height: 300px;
+    top: -158px;
+  }
 }
 .products__item.ice-coffee::before {
   content: '';
@@ -104,6 +128,14 @@
   position: absolute;
   display: inline-block;
   top: -106px;
+  @media screen and (min-width: $tablet) {
+  }
+  @media screen and (min-width: $desktop) {
+    background-image: url('/src/images/products_desktop/icecoffee_desk.png');
+    width: 300px;
+    height: 300px;
+    top: -158px;
+  }
 }
 .products__item.milkshakes::before {
   content: '';
@@ -116,6 +148,14 @@
   position: absolute;
   display: inline-block;
   top: -106px;
+  @media screen and (min-width: $tablet) {
+  }
+  @media screen and (min-width: $desktop) {
+    background-image: url('/src/images/products_desktop/milkshakes_desk.png');
+    width: 300px;
+    height: 300px;
+    top: -158px;
+  }
 }
 
 .products__item--title {
@@ -126,9 +166,16 @@
   letter-spacing: 0.04em;
   text-transform: uppercase;
   color: #131313;
+  margin-top: 123px;
   margin-bottom: 40px;
   @media screen and (min-width: $tablet) {
     font-size: 22px;
+    margin-top: 107px;
+  }
+  @media screen and (min-width: $desktop) {
+    font-size: 30px;
+    margin-top: 166px;
+    margin-bottom: 65px;
   }
 }
 .products__item--text {
@@ -138,11 +185,13 @@
   text-align: center;
   letter-spacing: 0.04em;
   color: #131313;
+  @media screen and (min-width: $desktop) {
+    font-size: 16px;
+  }
 }
 .products__item--link {
   position: absolute;
   bottom: 20px;
-
   left: 0;
   bottom: 20px;
 }
