@@ -1,0 +1,24 @@
+.advantages {
+    padding-top: 40px;
+    padding-bottom: 64px;
+}
+// .advantages__container {
+//     width: 100%;
+//     padding-left: 20px;
+//     padding-right: 20px;
+// }
+
+.advantages__title {
+    @extend %visually-hidden;
+}
+.advantages__list {
+    width: 230px;
+}
+.advantages__name {
+    @include itemTypography(700, 36px, 1.16);
+    padding-bottom: 28px;
+}
+.advantages__text {
+    @include itemTypography(700, 12px, 1.7);
+    padding-bottom: 32px;
+}
