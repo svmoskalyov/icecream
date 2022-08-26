@@ -1,0 +1,92 @@
+.reviews {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.reviews__container {
+    max-width: $mobile;
+    margin: 0 auto;
+    padding-top: 210px;
+    padding-bottom: 210px;
+
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: cover;
+
+    @media screen and (max-width: 767px) {
+        background-image: url(../images/icecream-bcg.png),
+            linear-gradient(to bottom, #84a178 24px, #f5f5f5 24px, #f5f5f5 100%);
+
+        @media (min-resolurion: 2dppx) {
+            background-image: url(../images/icecream-bcg-2x.png);
+        }
+    }
+}
+
+.reviews__slider {
+    position: relative;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.reviews__box {
+    max-width: 280px;
+    margin: 0 auto;
+}
+
+.reviews__icon {
+    margin: 0 auto;
+    margin-bottom: 32px;
+}
+
+.reviews__client {
+    max-width: 280px;
+    border-radius: 10px;
+    background-color: #84a178;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 2.55;
+    padding: 40px 60px;
+    text-align: center;
+
+    &--first {}
+
+    &--second {
+        @extend %visually-hidden;
+    }
+
+    &--third {
+        @extend %visually-hidden;
+    }
+}
+
+.reviews__name {
+    color: black;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1.86;
+    display: block;
+    text-align: center;
+    margin-top: 32px;
+}
+
+.reviews__button {
+    margin: 0 auto;
+    width: 72px;
+}
+
+.reviews__dots {
+    margin: 0;
+    padding: 0;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    border: 0;
+    background-color: #d9d9d9;
+    margin-right: 13px;
+    cursor: pointer;
+}
+
+.reviews__dots--third {
+    margin-right: 0;
+}
