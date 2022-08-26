@@ -1,0 +1,88 @@
+.hero {
+    margin-top: 60px;
+    position: relative;
+    height: 380px;
+
+
+    &__title {
+        font-family: getFont(secondory);
+        font-size: 26px;
+        line-height: 1.26;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+        margin-bottom: 32px;
+    }
+
+    &__title--more {
+        font-size: 34px;
+        line-height: 96.5%;
+    }
+}
+
+.buttton {
+    display: flex;
+
+
+    &__product {
+        width: 62px;
+        height: 24px;
+        border: 2px solid getColor(default);
+        border-radius: 8px;
+        font-size: 8px;
+        color: getColor(text-black);
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        margin-right: 8px;
+    }
+
+    &__product:hover,
+    &__product:focus {
+        border: 2px solid getColor(accent);
+    }
+
+    &__product:active {
+        border: 2px solid getColor(text-time);
+    }
+
+
+    &__made {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-decoration-line: underline;
+        font-size: 8px;
+        color: getColor(default);
+        width: 83px;
+        height: 24px;
+    }
+
+    &__made:hover,
+    &__made:focus {
+        color: getColor(accent);
+    }
+
+    &__made:active {
+        color: getColor(text-time);
+    }
+}
+
+.hero__img {
+    position: absolute;
+    bottom: -55px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+}
+
+.hero__bkg {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+}
+
