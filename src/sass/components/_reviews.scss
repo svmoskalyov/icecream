@@ -65,6 +65,7 @@
 
 .reviews__icon {
     margin: 0 auto;
+    margin-top: 30px;
     margin-bottom: 32px;
     @media screen and (min-width:$tablet) {
         margin-top: 150px;
@@ -99,18 +100,6 @@
                      @include itemTypography(500, 16px, 1.86);
                      padding: 45px 109px;
                  }
-    
-    &--first {
-
-    }
-
-    &--second {
-        @extend %visually-hidden;
-    }
-
-    &--third {
-        @extend %visually-hidden;
-    }
 }
 
 .reviews__name {
@@ -126,25 +115,27 @@
     }
 }
 
-.reviews__button {
-    margin: 0 auto;
-    width: 72px;
-}
 
-.reviews__dots {
-    margin: 0;
-    padding: 0;
+.slick-dots {
+    display: flex;
+    justify-content: center;
+
+    li {
+        &:not(:last-child) {
+            margin-right: 18px;
+        }
+    }
+    button {
+    font-size: 0;
     width: 12px;
     height: 12px;
     border-radius: 50%;
     border: 0;
     background-color: #d9d9d9;
-    margin-right: 13px;
-    cursor: pointer;
+    }
 }
-.reviews__dots--first {
-background-color: #84a178;
-}
-.reviews__dots--third {
-    margin-right: 0;
+.slick-active {
+    button {
+        background-color: #84a178;
+    }
 }
