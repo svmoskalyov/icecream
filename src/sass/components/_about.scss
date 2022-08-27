@@ -1,0 +1,62 @@
+.about {
+  padding-top: 60px;
+}
+
+.about__text {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 1.2;
+  text-align: center;
+  text-transform: uppercase;
+  color: #fcfcfc;
+  margin-bottom: 12px;
+}
+
+.about__title {
+  font-family: 'Seymour One';
+  font-style: normal;
+  font-size: 30px;
+  line-height: 1.26;
+  text-align: center;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #fcfcfc;
+  margin-bottom: 54px;
+}
+
+.about__img {
+  border-radius: 50%;
+  box-shadow: 0px -22px #efd478;
+  margin-bottom: 40px;
+}
+.about__desc {
+  width: 220px;
+  text-align: left;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.76;
+  letter-spacing: 0.04em;
+  color: #fcfcfc;
+}
+
+.about__btn {
+  margin-top: 20px;
+  display: inline-flex;
+  width: 176px;
+  height: 44px;
+  background: #f8d24e;
+  border-radius: 10px;
+  border: transparent;
+  font-family: 'Roboto';
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  color: #000000;
+  padding: 0 37px;
+  justify-content: center;
+  align-items: center;
+}
+.about__icon {
+  margin-left: 14px;
+}
