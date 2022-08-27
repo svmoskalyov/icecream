@@ -1,0 +1,173 @@
+.footer {
+  padding-top: 32px;
+  @media screen and(min-width:$tablet) {
+    padding-top: 40px;
+  }
+        @media screen and(min-width:$desktop) {
+            padding-top: 120px;
+        }
+}
+.footer__container{
+    @media screen and(min-width:$tablet){
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 32px;}
+           @media screen and(min-width:$desktop){
+            margin-bottom: 54px;
+           }
+}
+.footer__meta{
+@media screen and(min-width:$tablet){  display: flex;
+        flex-direction: column;
+        justify-content: center;}
+}
+.footer__content{@media screen and(max-width:$tablet){
+    flex-direction: column;
+    display: flex;
+    width: 234px;}
+@media screen and(max-width:$desktop){  
+    width: 352px;
+    flex-direction: column;
+        display: flex;
+   }
+   @media screen and(min-width:$desktop) {
+       flex-direction: column;
+       display: flex;
+       justify-content: center;
+   }
+ 
+}
+.footer__title {
+  @include itemTypography(700, 18px, 1.2);
+  text-transform: uppercase;
+  margin-bottom: 16px;
+  color: getColor(text-primary);
+  @media screen and(max-width:$desktop) {
+    @include itemTypography(700, 26px, 1.2);
+    letter-spacing: 0.04em;
+    color: gerColor(text-white);
+    margin-bottom: 9px;
+  }
+        @media screen and(min-width:$desktop){
+            @include itemTypography(700, 30px, 1.23);
+            letter-spacing: 0.04em;
+            margin-bottom: 14px;
+        }
+}
+.footer__title--contrast {
+  @include itemTypography(700, 34px, 1.2);
+  text-transform: uppercase;
+
+  color: getColor(text-primary);
+  @media screen and(max-width:$desktop) {
+    @include itemTypography(700, 48px, 1.2);
+    color: gerColor(text-white);
+    letter-spacing: 0.06em;
+  }
+        @media screen and(min-width:$desktop) {
+            @include itemTypography(700, 58px, 1.2);
+            letter-spacing: 0.06em;
+        }
+}
+.social {
+  
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+  }
+
+.social__item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+ 
+  @media screen and(max-width:$tablet) {
+    margin-top: 40px;
+    &:not(:last-child) {
+      margin-right: 28px;
+    }
+  }
+   @media screen and(min-width:$tablet) {
+       &:not(:last-child) {
+           margin-right: 30px;
+       }
+   }
+}
+.social__link {
+  width: 32px;
+  height: 32px;
+  background-color: getColor(default);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+@media screen and(min-width:$tablet){
+    width: 34px;
+    height: 34px;
+}
+&:hover,
+&:focus
+{
+    background-color: getColor(accent);
+}
+&:active{
+    background-color: getColor(text-time);
+}
+}
+.social__icon {
+  fill: getColor(text-primary);
+@media screen and(min-width:$tablet){
+    fill: getColor(bg-body);
+}
+
+}
+.social__link:hover .social__icon,
+.social__link:focus .social__icon{
+    fill: getColor(text-white);
+}
+.footer__link {
+  color: getColor(text-primary);
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  &--text {
+    color: getColor(text-secondory);
+  }
+        @media screen and(max-width:$tablet) {
+            @include itemTypography(700, 12px, 1.5);
+            margin-top: 40px;
+            margin-bottom: 40px;
+        }
+  @media screen and(min-width:$tablet){
+    @include itemTypography(700, 14px, 1.8);
+    margin-top: 32px;
+        margin-bottom: 0;
+  }
+        @media screen and(min-width:$desktop) {
+            @include itemTypography(700, 16px, 1.8);
+       }
+}
+.footer__text {
+  text-align: center;
+  color: #7a7a7a;
+  margin: 0 auto;
+  border-top: 1px solid #e1e1e1;
+    @media screen and(max-width:$tablet){
+        @include itemTypography(700, 14px, 1.5);
+padding-top: 16px;
+    padding-bottom: 16px;
+  
+    }
+    @media screen and(min-width:$tablet) {
+            @include itemTypography(700, 14px, 1.8);
+            letter-spacing: 0.02em;
+            padding-top: 14px;
+                padding-bottom: 14px;
+        }
+           @media screen and(min-width:$desktop){
+            @include itemTypography(700, 12px, 1.86);
+            letter-spacing: 0.02em;
+padding-top: 12px;
+    padding-bottom: 12px;
+           }
+}
