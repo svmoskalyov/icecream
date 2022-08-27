@@ -1,7 +1,13 @@
 .hero {
     margin-top: 60px;
     position: relative;
-    height: 380px;
+    height: 450px;
+    @media screen and (min-width: $tablet) {
+        height: 351px;
+    }
+    @media screen and (min-width: $desktop) {
+        height: 580px;
+    }
 
 
     &__title {
@@ -11,11 +17,31 @@
         letter-spacing: 0.04em;
         text-transform: uppercase;
         margin-bottom: 32px;
+        @media screen and (min-width: $tablet) {
+            font-size: 18px;
+            line-height: 1.26;
+        }
+
+        @media screen and (min-width: $desktop) {
+            font-size: 38px;
+            line-height: 1.26;
+        }
+
     }
 
     &__title--more {
         font-size: 34px;
         line-height: 96.5%;
+
+        @media screen and (min-width: $tablet) {
+            font-size: 24px;
+            line-height: 1.84;
+        }
+        
+        @media screen and (min-width: $desktop) {
+            font-size: 38px;
+            line-height: 1.26;
+        }
     }
 }
 
@@ -36,6 +62,14 @@
         align-items: center;
 
         margin-right: 8px;
+
+        @media screen and (min-width: $desktop) {
+            width: 138px;
+            height: 44px;
+            font-size: 14px;
+            line-height: 1.28;
+            margin-right: 32px;
+        }
     }
 
     &__product:hover,
@@ -57,6 +91,13 @@
         color: getColor(default);
         width: 83px;
         height: 24px;
+
+        @media screen and (min-width: $desktop) {
+            height: 44px;
+            width: 120px;
+            font-size: 14px;
+            line-height: 1.28;
+        }
     }
 
     &__made:hover,
@@ -75,6 +116,16 @@
     left: 0;
     right: 0;
     margin: 0 auto;
+    z-index: 1;
+
+    @media screen and (min-width: $tablet) {
+        left: 345px;
+    }
+    @media screen and (min-width: $desktop) {
+        left: 565px;
+        bottom: -97px;
+    }
+
 }
 
 .hero__bkg {
@@ -84,5 +135,63 @@
     left: 0;
     right: 0;
     margin: 0 auto;
+}
+
+.hero__plate {
+    position: absolute;
+    bottom: 14px;
+    @media screen and (max-width: $tablet) {
+        display: none;
+    }
+
+    @media screen and (min-width: $desktop) {
+        bottom: 61px;
+    }
+
+}
+
+.hero__shop {
+    @media screen and (max-width: $tablet) {
+        display: none;
+    }
+
+    position: absolute;
+    right: 32px;
+    top: 20px;
+}
+
+.hero__shop-list:not(:last-child) {
+    margin-bottom: 20px;
+}
+
+.hero__paragraph {
+    @media screen and (max-width: $tablet) {
+            display: none;
+        }
+
+    width: 150px;
+    height: 120px;
+
+    position: absolute;
+    left: 217px;
+    bottom: 20px;
+
+    @media screen and (min-width: $desktop) {
+        width: 200px;
+        left: 255px;
+        bottom: 100px;
+    }
+}
+
+.hero__text {
+    font-size: 12px;
+    line-height: 140%;
+
+    @media screen and (min-width: $desktop) {
+        font-size: 14px;
+        line-height: 140%;
+    }
+
+
 }
 
