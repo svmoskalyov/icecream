@@ -147,16 +147,19 @@
             @include itemTypography(700, 16px, 1.8);
        }
 }
+.footer__button{
+  border-top: 1px solid #e1e1e1;
+}
 .footer__text {
   text-align: center;
   color: #7a7a7a;
   margin: 0 auto;
-  border-top: 1px solid #e1e1e1;
+
     @media screen and(max-width:$tablet){
         @include itemTypography(700, 14px, 1.5);
 padding-top: 16px;
     padding-bottom: 16px;
-  
+   max-width: 280px;
     }
     @media screen and(min-width:$tablet) {
             @include itemTypography(700, 14px, 1.8);

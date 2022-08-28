@@ -1,17 +1,7 @@
 .visually-hidden {
   @extend %visually-hidden;
 }
-.contacts {
-  @media screen and(max-width:$tablet) {
-    margin-top: -60%;
-  }
-  @media screen and(min-width:$tablet) {
-    margin-top: -45%;
-  }
-  @media screen and(min-width:$desktop) {
-    margin-top: -13%;
-  }
-}
+
 .contacts__list {
   display: flex;
   flex-direction: column;
@@ -24,6 +14,17 @@
   @media screen and(min-width:$desktop) {
     margin: -16px;
   }
+    @media screen and(max-width:$tablet) {
+      margin-top: -60%;
+    }
+  
+    @media screen and(min-width:$tablet) {
+      margin-top: -45%;
+    }
+  
+    @media screen and(min-width:$desktop) {
+      margin-top: -25%;
+    }
 }
 .contacts__item {
   background-color: getColor(text-white);
