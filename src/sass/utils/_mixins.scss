@@ -10,3 +10,9 @@
   line-height: $height;
   text-decoration: none;
 }
+
+@mixin itemPosition($values) {
+  position: $values;
+  top: 0;
+  left: 0;
+}
