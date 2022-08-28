@@ -1,2 +1,0 @@
-$(".reviews__slider").slick({infinite:!0,arrows:!1,autoplay:!0,dots:!0}),document.querySelector(".menu-btn").addEventListener("click",(()=>{document.querySelector(".mobile-menu").classList.toggle("active"),document.querySelector(".menu-btn").classList.toggle("active"),document.querySelector(".page-header__btn").classList.toggle("active"),document.body.classList.toggle("overflow")}));
-//# sourceMappingURL=index.b65bf7b2.js.map
