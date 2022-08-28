@@ -120,6 +120,7 @@
   padding: 0 37px;
   justify-content: center;
   align-items: center;
+  transition: background-color 0.25s cubic-bezier(0.4, 0, 0.2, 1);
   @media screen and(min-width: $tablet) {
     padding: 12px 34px;
     margin-top: 40px;
