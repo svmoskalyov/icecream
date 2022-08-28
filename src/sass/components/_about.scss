@@ -1,7 +1,9 @@
 .about {
   padding-top: 60px;
 }
-
+.container {
+  position: relative;
+}
 .about__text {
   font-weight: 700;
   font-size: 18px;
@@ -35,11 +37,11 @@
   @media screen and(min-width: $tablet) {
     font-size: 34px;
     letter-spacing: 0.06em;
-    margin-bottom: 66px;
+    margin-bottom: 80px;
   }
   @media screen and(min-width: $desktop) {
     font-size: 36px;
-    margin-bottom: 121px;
+    margin-bottom: 188px;
   }
 }
 
@@ -50,6 +52,9 @@
   width: 278.19px;
   height: 278.19px;
   @media screen and(min-width: $tablet) {
+    position: absolute;
+    top: 147px;
+    left: 34px;
     box-shadow: 0 -26px #efd478, 0px -20px 20px 10px #43434329;
     width: 330px;
     height: 330px;
@@ -57,6 +62,8 @@
   }
   @media screen and(min-width: $desktop) {
     box-shadow: 0 -39px #efd478, 0px -20px 20px 10px #43434329;
+    top: 215px;
+    left: 16px;
     width: 490px;
     height: 490px;
   }
@@ -75,6 +82,7 @@
     margin-bottom: 14px;
   }
   @media screen and(min-width: $desktop) {
+    font-size: 14px;
     width: 463px;
   }
 }
@@ -116,6 +124,13 @@
     padding: 12px 34px;
     margin-top: 40px;
   }
+  &:hover,
+  &:focus {
+    background-color: getColor(accent);
+  }
+  &:active {
+    background-color: getColor(active);
+  }
 }
 .about__icon {
   margin-left: 14px;
@@ -123,7 +138,10 @@
 
 .card {
   @media screen and(min-width: $tablet) {
-    display: flex;
+    justify-content: end;
+  }
+  @media screen and(min-width: $desktop) {
+    right: 106px;
   }
 }
 
@@ -131,11 +149,9 @@
   @media screen and(min-width: $tablet) {
     display: flex;
     flex-direction: column;
-    margin-top: 14px;
-    margin-left: 36px;
+    margin-left: 368px;
   }
   @media screen and(min-width: $desktop) {
-    margin-top: 67px;
-    margin-left: 108px;
+    margin-left: 600px;
   }
 }
