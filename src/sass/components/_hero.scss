@@ -1,5 +1,4 @@
 .hero {
-    margin-top: 60px;
     position: relative;
     height: 450px;
     @media screen and (min-width: $tablet) {
@@ -16,15 +15,18 @@
         line-height: 1.26;
         letter-spacing: 0.04em;
         text-transform: uppercase;
+        margin-top: 61px;
         margin-bottom: 32px;
         @media screen and (min-width: $tablet) {
             font-size: 18px;
             line-height: 1.26;
+            margin-top: 40px;
         }
 
         @media screen and (min-width: $desktop) {
             font-size: 38px;
             line-height: 1.26;
+            margin-top: 40px;
         }
 
     }
@@ -45,6 +47,8 @@
     }
 }
 
+
+
 .buttton {
     display: flex;
 
@@ -56,12 +60,13 @@
         border-radius: 8px;
         font-size: 8px;
         color: getColor(text-black);
-
         display: flex;
         justify-content: center;
         align-items: center;
 
         margin-right: 8px;
+
+        cursor: pointer;
 
         @media screen and (min-width: $desktop) {
             width: 138px;
@@ -130,11 +135,19 @@
 
 .hero__bkg {
     position: absolute;
-    width: 100%;
     bottom: 0;
     left: 0;
     right: 0;
     margin: 0 auto;
+    @media screen and (width: $mobile) {
+        min-width: 480px;
+    }
+    @media screen and (width: $tablet) {
+        min-width: 768px;
+    }
+    @media screen and (width: $desktop) {
+        min-width: 1200px;
+    }
 }
 
 .hero__plate {
@@ -150,36 +163,75 @@
 
 }
 
+.container__hero {
+    position: relative;
+}
+
 .hero__shop {
+
     @media screen and (max-width: $tablet) {
         display: none;
     }
 
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
     position: absolute;
-    right: 32px;
-    top: 20px;
+    right: 0;
+    top: 50px;
 }
 
 .hero__shop-list:not(:last-child) {
     margin-bottom: 20px;
 }
 
+.hero__shop-list--cafe {
+    margin-left: 14px;
+    @media screen and (min-width: $desktop) {
+        margin-left: 27px;
+    }
+
+}
+
+.hero__shop-list--tablet {
+    @media screen and (min-width: $tablet) {
+        display: block;
+    }
+    @media screen and (min-width: $desktop) {
+        display: none;
+    }
+}
+
+.hero__shop-list--desktop {
+
+    @media screen and (min-width: $tablet) {
+        display: none;
+        
+    }
+
+    @media screen and (min-width: $desktop) {
+        display: block;
+        }
+}
+
+
 .hero__paragraph {
+    position: absolute;
+    z-index: 2;
+
     @media screen and (max-width: $tablet) {
             display: none;
         }
 
     width: 150px;
     height: 120px;
-
-    position: absolute;
-    left: 217px;
-    bottom: 20px;
+    margin-left: 180px;
+    margin-top: 70px;
 
     @media screen and (min-width: $desktop) {
         width: 200px;
-        left: 255px;
-        bottom: 100px;
+        margin-left: 240px;
+        margin-top: 140px;
     }
 }
 
@@ -191,7 +243,6 @@
         font-size: 14px;
         line-height: 140%;
     }
-
-
 }
+
 

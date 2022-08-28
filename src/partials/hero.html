@@ -1,12 +1,44 @@
 <section class="hero" id="part1">
     <div class="container">
+
+        <div class="container__hero">
+                <ul class="hero__shop">
+                    <li class="hero__shop-list hero__shop-list--tablet">
+                
+                        <svg class="hero__shop-list--cafe" width="32" height="48">
+                            <use href="./images/icon.svg#icon-cafe"></use>
+                        </svg>
+                    </li>
+                
+                    <li class="hero__shop-list hero__shop-list--tablet">
+                        <svg class="hero__shop-list--food" width="46" height="48">
+                            <use href="./images/icon.svg#icon-food"></use>
+                        </svg>
+                    </li>
+                
+                    <li class="hero__shop-list hero__shop-list--desktop">
+                
+                        <svg class="hero__shop-list--cafe" width="52" height="77">
+                            <use href="./images/icon.svg#icon-cafe"></use>
+                        </svg>
+                    </li>
+                
+                    <li class="hero__shop-list hero__shop-list--desktop">
+                        <svg class="hero__shop-list--food" width="79" height="77">
+                            <use href="./images/icon.svg#icon-food"></use>
+                        </svg>
+                    </li>
+                </ul>
+
+        </div>
+
         <h1 class="hero__title">ice cream <br> made with <br> <span class="hero__title--more">passion</span> </h1>
 
         <ul class="buttton">
-            <li class="buttton__product"> <a href="#">Products</a> </li>
-            <li class="buttton__made"> <a href="#">How it’s made?</a> </li>
+            <li class="buttton__product"> <a href="#part4">Products</a> </li>
+            <li class="buttton__made"> <a href="#part2">How it’s made?</a> </li>
         </ul>
-        
+
         <picture>
             <source
             srcset="./images/hero/desktop/smile1x.png 1x, ./images/hero/desktop/smile2x.png 1x"
@@ -27,7 +59,7 @@
             <img class="hero__img" src="./images/hero/mobile/smile1x.png"
             alt="ice cream smiles">
         </picture>
-        
+    
         <picture>
             <source
             srcset="./images/hero/frame1xdesktop.png 1x, ./images/hero/frame2xdesktop.png 2x"
@@ -64,26 +96,13 @@
             <p class="hero__text">Lorem ipsu m dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
             </p>
                     
-            <a href="">
+            <a class="hero--line" href="">
                 <svg width="40" height="40">
                             <use href="./images/icon.svg#icon-arrowhero"></use>
                 </svg>
             </a>
+
         </div>
 
-        <ul class="hero__shop">
-            <li class="hero__shop-list">
-                <svg class="hero__shop-list--cafe" width="32" height="48">
-                    <use href="./images/icon.svg#icon-cafe"></use>
-                </svg>
-            </li>
-            <li class="hero__shop-list">
-                <svg class="hero__shop-list--food" width="46" height="48">
-                    <use href="./images/icon.svg#icon-food"></use>
-                </svg>
-            </li>
-        </ul>
-            
-        
     </div>
 </section>
