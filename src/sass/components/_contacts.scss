@@ -14,17 +14,17 @@
   @media screen and(min-width:$desktop) {
     margin: -16px;
   }
-    @media screen and(max-width:$tablet) {
-      margin-top: -60%;
-    }
-  
-    @media screen and(min-width:$tablet) {
-      margin-top: -45%;
-    }
-  
-    @media screen and(min-width:$desktop) {
-      margin-top: -15%;
-    }
+  @media screen and(max-width:$tablet) {
+    margin-top: -60%;
+  }
+
+  @media screen and(min-width:$tablet) {
+    margin-top: -45%;
+  }
+
+  @media screen and(min-width:$desktop) {
+    margin-top: -15%;
+  }
 }
 .contacts__item {
   background-color: getColor(text-white);
@@ -57,7 +57,7 @@
   border-radius: 4px;
   @include itemTypography(500, 12px, 1.8);
   letter-spacing: 0.04em;
-@include centeredFlex();
+  @include centeredFlex();
   text-align: center;
   text-transform: uppercase;
   margin-top: 0;
@@ -144,7 +144,7 @@
   border-radius: 10px;
   padding: 14px 17px;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-@include centeredFlex();
+  @include centeredFlex();
   text-align: center;
   @media screen and(max-width:$tablet) {
     margin-bottom: 8px;
@@ -174,8 +174,8 @@
   border: 2px solid getColor(default);
   border-radius: 10px;
   padding: 12px 28px;
-    transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
-@include centeredFlex();
+  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  @include centeredFlex();
   text-align: center;
   @media screen and(min-width:$tablet) {
     @include itemTypography(600, 14px, 1.2);
@@ -192,7 +192,7 @@
 }
 .contacts__item--button {
   @media screen and(min-width:$tablet) {
-@include centeredFlex();
+    @include centeredFlex();
     margin: 0 auto;
     margin-top: 60px;
   }
