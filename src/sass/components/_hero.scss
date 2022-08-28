@@ -1,11 +1,12 @@
 .hero {
     position: relative;
     height: 450px;
+
     @media screen and (min-width: $tablet) {
-        height: 351px;
+        height: 350px;
     }
     @media screen and (min-width: $desktop) {
-        height: 580px;
+        height: 585px;
     }
 
 
@@ -15,8 +16,9 @@
         line-height: 1.26;
         letter-spacing: 0.04em;
         text-transform: uppercase;
-        margin-top: 61px;
+        margin-top: 50px;
         margin-bottom: 32px;
+        
         @media screen and (min-width: $tablet) {
             font-size: 18px;
             line-height: 1.26;
@@ -54,6 +56,7 @@
 
 
     &__product {
+        cursor: pointer;
         width: 62px;
         height: 24px;
         border: 2px solid getColor(default);
@@ -66,14 +69,13 @@
 
         margin-right: 8px;
 
-        cursor: pointer;
-
         @media screen and (min-width: $desktop) {
             width: 138px;
             height: 44px;
             font-size: 14px;
             line-height: 1.28;
             margin-right: 32px;
+            font-weight: 600;
         }
     }
 
@@ -88,11 +90,13 @@
 
 
     &__made {
+        cursor: pointer;
         display: flex;
         justify-content: center;
         align-items: center;
         text-decoration-line: underline;
         font-size: 8px;
+        font-weight: 600;
         color: getColor(default);
         width: 83px;
         height: 24px;
@@ -117,28 +121,32 @@
 
 .hero__img {
     position: absolute;
-    bottom: -55px;
+    bottom: -54px;
     left: 0;
     right: 0;
     margin: 0 auto;
-    z-index: 1;
+ 
 
     @media screen and (min-width: $tablet) {
+        bottom: -56px;
         left: 345px;
     }
     @media screen and (min-width: $desktop) {
+        height: 738px;
         left: 565px;
-        bottom: -97px;
+        bottom: -94px;
     }
 
 }
 
 .hero__bkg {
+    z-index: -1;
     position: absolute;
     bottom: 0;
     left: 0;
     right: 0;
     margin: 0 auto;
+    
     @media screen and (width: $mobile) {
         min-width: 480px;
     }
@@ -229,7 +237,7 @@
     margin-top: 70px;
 
     @media screen and (min-width: $desktop) {
-        width: 200px;
+        width: 220px;
         margin-left: 240px;
         margin-top: 140px;
     }
@@ -237,12 +245,15 @@
 
 .hero__text {
     font-size: 12px;
-    line-height: 140%;
+    line-height: 1.26;
 
     @media screen and (min-width: $desktop) {
         font-size: 14px;
         line-height: 140%;
+        margin-bottom: 25px;
     }
 }
+
+
 
 
