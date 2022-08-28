@@ -5,6 +5,7 @@
 .about__text {
   font-weight: 700;
   font-size: 18px;
+  font-style: normal;
   line-height: 1.2;
   text-align: center;
   text-transform: uppercase;
@@ -14,6 +15,9 @@
     font-weight: 800;
     font-size: 22px;
     letter-spacing: 0.04em;
+  }
+  @media screen and(min-width: $desktop) {
+    font-size: 30px;
   }
 }
 
@@ -33,6 +37,10 @@
     letter-spacing: 0.06em;
     margin-bottom: 66px;
   }
+  @media screen and(min-width: $desktop) {
+    font-size: 36px;
+    margin-bottom: 121px;
+  }
 }
 
 .about__img {
@@ -46,6 +54,11 @@
     width: 330px;
     height: 330px;
     margin-bottom: 0;
+  }
+  @media screen and(min-width: $desktop) {
+    box-shadow: 0 -39px #efd478, 0px -20px 20px 10px #43434329;
+    width: 490px;
+    height: 490px;
   }
 }
 .about__desc {
@@ -61,6 +74,9 @@
     width: 334px;
     margin-bottom: 14px;
   }
+  @media screen and(min-width: $desktop) {
+    width: 463px;
+  }
 }
 
 .about__desc--tab {
@@ -73,6 +89,10 @@
     font-size: 12px;
     line-height: 1.76;
     letter-spacing: 0.04em;
+  }
+  @media screen and(min-width: $desktop) {
+    width: 463px;
+    font-size: 14px;
   }
 }
 
@@ -113,5 +133,9 @@
     flex-direction: column;
     margin-top: 14px;
     margin-left: 36px;
+  }
+  @media screen and(min-width: $desktop) {
+    margin-top: 67px;
+    margin-left: 108px;
   }
 }
