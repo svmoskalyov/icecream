@@ -1,174 +1,216 @@
-.visually-hidden{
-    @extend %visually-hidden;
+.visually-hidden {
+  @extend %visually-hidden;
 }
-.contacts__list{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    @media screen and(min-width:$tablet) {
-flex-wrap: wrap;
-flex-direction: row;
-margin: -8px;
+
+.contacts__list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  @media screen and(min-width:$tablet) {
+    flex-wrap: wrap;
+    flex-direction: row;
+    margin: -8px;
+  }
+  @media screen and(min-width:$desktop) {
+    margin: -16px;
+  }
+    @media screen and(max-width:$tablet) {
+      margin-top: -60%;
     }
-        @media screen and(min-width:$desktop){
-            margin: -16px;
-        }
+  
+    @media screen and(min-width:$tablet) {
+      margin-top: -45%;
+    }
+  
+    @media screen and(min-width:$desktop) {
+      margin-top: -25%;
+    }
 }
-.contacts__item{
-    background-color: getColor(text-white);
-width: 280px;
-padding: 40px 32px;
-margin-right: 0;
-    box-shadow: 0px 8px 30px rgba(212, 20, 67, 0.1);
-        border-radius: 24px;
-      @media screen and(max-width:$tablet){
-&:not(:first-child){
-    margin-top: 20px;
-}}
-@media screen and(min-width:$tablet){
+.contacts__item {
+  background-color: getColor(text-white);
+  width: 280px;
+  padding: 40px 32px;
+  margin-right: 0;
+  box-shadow: 0px 8px 30px rgba(212, 20, 67, 0.1);
+  border-radius: 24px;
+  @media screen and(max-width:$tablet) {
+    &:not(:first-child) {
+      margin-top: 20px;
+    }
+  }
+  @media screen and(min-width:$tablet) {
     padding: 40px 40px 40px 24px;
     margin-top: 0;
-width: calc((100% - 6 * 8px) / 3);
+    width: calc((100% - 6 * 8px) / 3);
     margin: 8px;
-}
-@media screen and(min-width:$desktop){
+  }
+  @media screen and(min-width:$desktop) {
     padding: 40px 40px;
     width: calc((100% - 6 * 16px) / 3);
-        margin: 16px;
+    margin: 16px;
+  }
 }
-}
-.contacts__text{
-    width: 80px;
-    background-color: getColor(default) ;
-    color: getColor(text-primary);
-    border-radius:4px;
-    @include itemTypography(500, 12px, 1.8);
-    letter-spacing: 0.04em;
+.contacts__text {
+  width: 80px;
+  background-color: getColor(default);
+  color: getColor(text-primary);
+  border-radius: 4px;
+  @include itemTypography(500, 12px, 1.8);
+  letter-spacing: 0.04em;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
-text-transform: uppercase;
-margin-top: 0;
-margin-bottom: 20px;
-&--current{
+  text-transform: uppercase;
+  margin-top: 0;
+  margin-bottom: 20px;
+  &--current {
     width: 138px;
-}
-@media screen and(min-width:$tablet) {
-@include itemTypography(500, 16px, 1.87);
-color: getColor(text-black);
-margin-bottom: 32px;
-}
-}
-.contacts-content__title{ color: getColor(text-secondory);
-    @include itemTypography(500, 12px, 1.5);
-    letter-spacing: 0.04em;
-    margin-top: 0;
-    margin-bottom: 8px;
-    @media screen and(min-width:$tablet){
-        @include itemTypography(500, 14px, 1.86);
-    }
-        @media screen and(min-width:$desktop) {
-            @include itemTypography(500, 16px, 1.87);
-        }
-}
-.contacts-content__link{ color: getColor(milkshakes);
-    @include itemTypography(500, 12px, 1.5);
-    letter-spacing: 0.04em;
-    margin: 0;
-    @media screen and(min-width:$tablet) {
-            @include itemTypography(500, 14px, 1.83);
-        }
-                @media screen and(min-width:$tablet) {
-                    @include itemTypography(500, 16px, 1.83);
-                }
-}
-.contacts-content__text{
-    color: getColor(text-time);
-    @include itemTypography(500, 12px, 1.5);
-  margin: 0;
-  &:not(:last-child){
-    margin-bottom: 8px;
   }
-   @media screen and(min-width:$tablet) {
-       @include itemTypography(500, 14px, 1.86);
-        &:not(:last-child) {
-                margin-bottom: 12px;
-            }
-   }
-   @media screen and(min-width:$desktop) {
-       @include itemTypography(500, 16px, 1.86);
-}}
-.contacts-content__item:not(:last-child):after{
-content: '';
-border: 1px solid #E1E1E1;
-display: flex;
-margin-top: 24px;
-margin-bottom: 24px;
-@media screen and(min-width:$tablet){
-    margin-top: 32px;
-    margin-bottom: 32px;
-}
-}
-.contacts__button{
-    @include itemTypography(500, 16px, 1.25);
+  @media screen and(min-width:$tablet) {
+    @include itemTypography(500, 16px, 1.87);
     color: getColor(text-black);
-    background-color: getColor(default);
-    border: 0;
-    border-radius: 10px;
-    padding: 14px 17px;
-    display: flex;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
-        @media screen and(max-width:$tablet){
-margin-bottom: 8px;
-    margin-top: 32px;
-        }
-                 @media screen and(min-width:$tablet) {
-                    margin-right: 16px;
-                  
-                            @include itemTypography(600, 14px, 1.2);
-                        
+    margin-bottom: 32px;
+  }
 }
+.contacts-content__title {
+  color: getColor(text-secondory);
+  @include itemTypography(500, 12px, 1.5);
+  letter-spacing: 0.04em;
+  margin-top: 0;
+  margin-bottom: 8px;
+  @media screen and(min-width:$tablet) {
+    @include itemTypography(500, 14px, 1.86);
+  }
+  @media screen and(min-width:$desktop) {
+    @include itemTypography(500, 16px, 1.87);
+  }
+}
+.contacts-content__title--contrast {
+  color: getColor(text-black);
+  @include itemTypography(500, 12px, 1.5);
+  margin: 0;
+  @media screen and(min-width:$tablet) {
+    @include itemTypography(500, 14px, 1.86);
+  }
 
   @media screen and(min-width:$desktop) {
-      margin-right: 18px;
+    @include itemTypography(500, 16px, 1.87);
   }
 }
-.contacts__button--active{
-    @include itemTypography(700, 16px, 1.25);
-    color: getColor(text-primary);
-    background-color: transparent;
-    border: 2px solid getColor(default);
-        border-radius: 10px;
-        padding: 12px 28px;
-        display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            @media screen and(min-width:$tablet){
-            @include itemTypography(600, 14px, 1.2);
-            }
+.contacts-content__link {
+  color: getColor(milkshakes);
+  @include itemTypography(500, 12px, 1.5);
+  letter-spacing: 0.04em;
+  margin: 0;
+  @media screen and(min-width:$tablet) {
+    @include itemTypography(500, 14px, 1.83);
+  }
+  @media screen and(min-width:$desktop) {
+    @include itemTypography(500, 16px, 1.83);
+  }
 }
-.contacts__item--button{
-    @media screen and(min-width:$tablet){
-        display: flex;
-        align-items: center;
-        justify-content: center;
-       margin: 0 auto;
-       margin-top: 60px;
+.contacts-content__text {
+  color: getColor(text-time);
+  @include itemTypography(500, 12px, 1.5);
+  margin: 0;
+  &:not(:last-child) {
+    margin-bottom: 8px;
+  }
+  @media screen and(min-width:$tablet) {
+    @include itemTypography(500, 14px, 1.86);
+    &:not(:last-child) {
+      margin-bottom: 12px;
     }
-          @media screen and(min-width:$desktop){
-            margin-top: 80px;
-          }
+  }
+  @media screen and(min-width:$desktop) {
+    @include itemTypography(500, 16px, 1.86);
+  }
 }
-.contacts__icon{
-    margin-left: 7px;
-    fill: getColor(text-black);
-   
+.contacts-content__item:not(:last-child):after {
+  content: '';
+  border: 1px solid #e1e1e1;
+  display: flex;
+  margin-top: 24px;
+  margin-bottom: 24px;
+  @media screen and(min-width:$tablet) {
+    margin-top: 32px;
+    margin-bottom: 32px;
+  }
 }
-.contacts__icon--active{
-    margin-left: 12px;
-    fill: getColor(text-primary);
+.contacts__button {
+  @include itemTypography(500, 16px, 1.25);
+  color: getColor(text-black);
+  background-color: getColor(default);
+  border: 0;
+  border-radius: 10px;
+  padding: 14px 17px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  @media screen and(max-width:$tablet) {
+    margin-bottom: 8px;
+    margin-top: 32px;
+  }
+  @media screen and(min-width:$tablet) {
+    margin-right: 16px;
+    width: 192px;
+    @include itemTypography(600, 14px, 1.2);
+  }
+
+  @media screen and(min-width:$desktop) {
+    margin-right: 18px;
+  }
+  &:hover,
+  &:focus {
+    background-color: getColor(accent);
+  }
+  &:active {
+    background-color: getColor(active);
+  }
+}
+.contacts__button--active {
+  @include itemTypography(700, 16px, 1.25);
+  color: getColor(text-primary);
+  background-color: transparent;
+  border: 2px solid getColor(default);
+  border-radius: 10px;
+  padding: 12px 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  @media screen and(min-width:$tablet) {
+    @include itemTypography(600, 14px, 1.2);
+    width: 158px;
+  }
+  &:hover,
+  &:focus {
+    border: 2px solid getColor(accent);
+  }
+
+  &:active {
+    border: 2px solid getColor(active);
+  }
+}
+.contacts__item--button {
+  @media screen and(min-width:$tablet) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    margin-top: 60px;
+  }
+  @media screen and(min-width:$desktop) {
+    margin-top: 80px;
+  }
+}
+.contacts__icon {
+  margin-left: 7px;
+  fill: getColor(text-black);
+}
+.contacts__icon--active {
+  margin-left: 12px;
+  fill: getColor(text-primary);
 }
