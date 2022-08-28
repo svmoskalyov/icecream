@@ -3,4 +3,8 @@ body {
   letter-spacing: 0.04em;
   color: getColor(text-primary);
   background-color: getColor(bg-body);
+  
+      &.overflow {
+    overflow: hidden;
+  }
 }
