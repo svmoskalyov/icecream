@@ -11,6 +11,9 @@
     width: 100%;
     padding-left: 20px;
     padding-right: 20px;
+    @media screen and (min-width:1200px) {
+            margin-top: 120px;
+    }
 }
 
 .advantages__title {
@@ -43,9 +46,9 @@
         
     }
 
-    &--cow::before {background-image: url(../images/icon-cow.png);}
-    &--weight::before {background-image: url(../images/icon-weight.png);}
-    &--ice::before {background-image: url(../images/icon-ice.png);}   
+    &--cow::before {background-image: url(../images/advantage/icon-cow.png);}
+    &--weight::before {background-image: url(../images/advantage/icon-weight.png);}
+    &--ice::before {background-image: url(../images/advantage/icon-ice.png);}   
 
         @media screen and (min-width:$tablet) {
             margin-right: 32px;
