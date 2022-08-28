@@ -1,0 +1,189 @@
+.page-header {
+  height: 50px;
+
+  &__container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    height: 100%;
+  }
+
+  &__box {
+    display: flex;
+    align-items: center;
+  }
+
+  &__btn {
+    display: none;
+
+    @include itemTypography(600, 14px, 1.21);
+
+    padding: 0;
+    width: 150px;
+    height: 42px;
+    margin-left: 30px;
+
+    color: getColor(text-black);
+    background-color: getColor(default);
+
+    border: 0ch;
+    border-radius: 10px;
+    cursor: pointer;
+
+    &.active {
+      display: none;
+    }
+
+    &:hover,
+    &:focus {
+      background-color: getColor(accent);
+    }
+
+    @media screen and (min-width: 768px) {
+      display: block;
+    }
+
+    @media screen and (min-width: 1200px) {
+      margin: 0;
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    height: 65px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    height: 80px;
+  }
+}
+
+.logo {
+  display: flex;
+  width: 41px;
+  height: 37px;
+  z-index: 20;
+
+  @media screen and (min-width: 768px) {
+    width: 48px;
+    height: 44px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    width: 60px;
+    height: 65px;
+  }
+}
+
+.menu-btn {
+  z-index: 12;
+  display: inline-flex;
+
+  padding: 0;
+
+  background-color: transparent;
+  border-radius: 5px;
+  border: none;
+
+  &__close {
+    display: none;
+  }
+
+  &.active {
+    .menu-btn__menu {
+      display: none;
+    }
+
+    .menu-btn__close {
+      display: block;
+      cursor: pointer;
+      fill: getColor(text-white);
+
+      &:hover,
+      &:focus {
+        fill: getColor(accent);
+      }
+    }
+  }
+
+  @media screen and (min-width: 1200px) {
+    display: none;
+  }
+}
+
+.mobile-menu {
+  display: none;
+  overflow: auto;
+
+  &.active {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 10;
+
+    display: flex;
+
+    background-color: getColor(bg-body);
+  }
+
+  @media screen and (min-width: 1200px) {
+    display: flex;
+    margin-right: 145px;
+  }
+}
+
+.nav {
+  height: 100%;
+
+  &__list {
+    padding: 85px 15px 15px;
+
+    width: 100vw;
+    height: 100vh;
+
+    @media screen and (min-width: 768px) {
+      padding: 125px 15px 15px;
+    }
+
+    @media screen and (min-width: 1200px) {
+      display: flex;
+      padding: 0;
+
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &__item {
+    padding: 16px 0;
+    text-align: center;
+
+    @media screen and (min-width: 768px) {
+      padding: 20px 0;
+    }
+
+    @media screen and (min-width: 1200px) {
+      padding: 0;
+
+      &:not(:last-child) {
+        margin-right: 30px;
+      }
+    }
+  }
+
+  &__link {
+    @include itemTypography(700, 32px, 1.22);
+
+    @media screen and (min-width: 1200px) {
+      @include itemTypography(700, 16px, 1.25);
+    }
+
+    &:hover,
+    &:focus {
+      color: getColor(accent);
+    }
+  }
+}
