@@ -1,1 +1,0 @@
-{"mappings":"AAAAA,EAAE,oBAAoBC,MAAM,CACxBC,UAAU,EACVC,QAAQ,EACRC,UAAU,EACVC,MAAM","sources":["src/index.js"],"sourcesContent":["$(\".reviews__slider\").slick({\n    infinite: true,\n    arrows: false,\n    autoplay: true,\n    dots: true,\n});"],"names":["$","slick","infinite","arrows","autoplay","dots"],"version":3,"file":"index.40bb64c5.js.map"}
