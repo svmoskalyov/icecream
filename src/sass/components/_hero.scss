@@ -170,7 +170,8 @@
     @media screen and (min-width: $desktop) {
         bottom: 61px;
     }
-
+    
+    animation: rotateWithOrigin 3000ms linear 1000ms infinite;
 }
 
 .container__hero {
