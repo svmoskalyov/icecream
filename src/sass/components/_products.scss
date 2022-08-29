@@ -4,12 +4,27 @@
   padding-right: 0;
   padding-bottom: 80px;
   background-color: white;
-  background-image: url(/src/images/Мороженое\ фон-mob.png);
+  background-image: url('/src/images/fon/fon_mobx1.png');
+  @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    background-image: url('/src/images/fon/fon_mobx2.png');
+  }
   @media screen and (min-width: $tablet) {
-    background-image: url(/src/images/Мороженое\ фон\ tab.png);
+    background-image: url('/src/images/fon/fon_tabx1.png');
+    @media (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: url('/src/images/fon/fon_tabx2.png');
+    }
   }
   @media screen and (min-width: $desktop) {
-    background-image: url(/src/images/Мороженое\ фон.png);
+    background-image: url('/src/images/fon/fon_deskx1.png');
+    @media (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: url('/src/images/fon/fon_deskx2.png');
+    }
     padding-bottom: 66px;
   }
 }
