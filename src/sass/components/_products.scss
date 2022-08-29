@@ -222,7 +222,10 @@
   bottom: 20px;
   left: 50%;
   transform: translateX(-50%);
-  bottom: 20px;
+  transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  &:hover {
+    transform: scale(1.5);
+  }
 }
 .products__icon {
   height: 16px;
