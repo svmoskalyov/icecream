@@ -159,8 +159,8 @@
   @media screen and(min-width:$desktop) {
     margin-right: 18px;
   }
-@extend %background-hover;
-@extend %background-active;
+  @extend %background-hover;
+  @extend %background-active;
 }
 .contacts__button--active {
   @include itemTypography(700, 16px, 1.25);
@@ -176,8 +176,8 @@
     @include itemTypography(600, 14px, 1.2);
     width: 158px;
   }
-@extend %hover-border;
-@extend %active-border;
+  @extend %hover-border;
+  @extend %active-border;
 }
 .contacts__item--button {
   @media screen and(min-width:$tablet) {
@@ -196,4 +196,165 @@
 .contacts__icon--active {
   margin-left: 12px;
   fill: getColor(text-primary);
+}
+.backdrop-cooperation {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  background-color: rgba(0, 0, 0, 0.2);
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 2;
+  transform: translate(-50%, -50%);
+    border-radius: 10px;
+background-repeat: no-repeat;
+  background-position: top;
+  background-size: cover;
+  background-image: url(../images/reviews/icecream-bcg.png),
+    linear-gradient(to bottom, #f5f5f5 24px, #f5f5f5 100%);
+  &__modal-cooperation {
+    width: 300px;
+    height: 420px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    @media screen and(min-width:$tablet) {
+      width: 480px;
+      height: 450px;
+    }
+  }
+}
+
+.backdrop-cooperation.is-hidden-cooperation {
+  opacity: 0;
+  pointer-events: none;
+  overflow: visible;
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.backdrop-cooperation.is-hidden-cooperation .backdrop-cooperation__modal {
+  transform: translate(-50%, -50%);
+}
+.backdrop-cooperation__button {
+  @include centeredFlex;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  padding: 0;
+  margin-top: 8px;
+  margin-bottom: 0;
+  margin-left: auto;
+  margin-right: 8px;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+  right: 0;
+  top: 0;
+  background-color: getColor(default);
+  fill: getColor(text-black);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    @extend %background-hover;
+    @extend %background-active;
+  border: 0;
+}
+.form-modal {
+  padding-bottom: 40px;
+  padding-left: 40px;
+  padding-right: 40px;
+  margin-left: auto;
+  margin-right: auto;
+  &__title {
+    @include itemTypography(700, 16px, 1.83);
+    letter-spacing: 0.03em;
+    margin: 0 auto 12px auto;
+    color: getColor(text-black);
+    text-align: center;
+  }
+}
+.form-modal__content {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+  position: relative;
+}
+
+.form-modal__label {
+  @include itemTypography(700, 12px, 1.25);
+  text-align: start;
+  margin-top: 0;
+  margin-bottom: 4px;
+  color: getColor(text-black);
+}
+.form-modal__input {
+  width: 230px;
+  height: 30px;
+  padding-left: 15px;
+  padding-top: 11px;
+  padding-bottom: 11px;
+  padding-right:15px;
+  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  @extend %hover-border;
+  @extend %active-border;
+  @media screen and(min-width:$tablet) {
+    width: 400px;
+    height: 40px;
+  }
+}
+.form-modal__textarea {
+  width: 230px;
+  height: 70px;
+  padding: 12px 16px;
+  resize: none;
+  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  @extend %hover-border;
+  @extend %active-border;
+  @media screen and(min-width:$tablet) {
+    width: 400px;
+    height: 120px;
+    margin-bottom: 20px;
+  }
+  &::placeholder {
+    @include itemTypography(500, 12px, 1.25);
+    color: rgba(117, 117, 117, 0.5);
+  }
+}
+.form-modal__input,
+.form-modal__textarea {
+  margin-top: 0;
+  margin-bottom: 0;
+  outline: 0;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  transition: fill, border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.form-modal__icon {
+  position: absolute;
+  top: 0;
+  left: 12px;
+  transform: translateY(160%);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.form-modal__button {
+  cursor: pointer;
+  @include centeredFlex();
+  width: 150px;
+  height: 35px;
+  margin: 0 auto;
+  padding: 0;
+  @include itemTypography(500, 16px, 1.25);
+  color: getColor(text-black);
+  background-color: getColor(default);
+  border: 0;
+  border-radius: 15px;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  @include centeredFlex();
+  text-align: center;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  @extend %background-hover;
+  @extend %background-active;
+  margin-top: 25px;
+  @media screen and(min-width:$tablet) {
+    width: 192px;
+    height: 40px;
+  }
 }
