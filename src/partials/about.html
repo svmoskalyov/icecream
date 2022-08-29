@@ -3,7 +3,35 @@
     <p class="about__text">tradition and love</p>
     <h2 class="about__title">how it’s made?</h2>
     <div class="card">
-      <img class="about__img" src="/src/images/about/caw_tab.png" alt="cow" />
+      <picture>
+        <source
+          srcset="
+            /src/images/about/cow_desk_1.png 1x,
+            /src/images/about/cow_desk_2.png 2x
+          "
+          media="(min-width:1200px)"
+        />
+        <source
+          srcset="
+            /src/images/about/cow_tabx_1.png 1x,
+            /src/images/about/cow_tabx_2.png 2x
+          "
+          media="(min-width:768px)"
+        />
+        <source
+          srcset="
+            /src/images/about/cow_mobx_1.png 1x,
+            /src/images/about/cow_mobx_2.png 2x
+          "
+          media="(min-width:320px)"
+        />
+        <img
+          class="about__img"
+          src="/src/images/about/cow_mobx_1.png"
+          alt="cow"
+        />
+      </picture>
+
       <div class="about__box">
         <p class="about__desc">
           Ice is a place where you will become not only a little happier, but
