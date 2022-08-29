@@ -3,11 +3,10 @@
 // }
 .gallery__container {
     position: relative;
-    // height: 1230px;
- 
-
- 
+    // height: 1230px; 
 //    } 
+.gallery__title--hidden {
+    @extend %visually-hidden;}
 }
 .gallery__picture {
     padding-left: 20px;
