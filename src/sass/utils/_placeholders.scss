@@ -1,0 +1,14 @@
+%background-hover:hover,
+%background-hover:focus {
+background-color: getColor(accent);
+}
+%background-active:active{
+    background-color: getColor(active);
+}
+%hover-border:hover,
+%hover-border:focus{
+    border: 2px solid getColor(accent);
+}
+%active-border:active{
+ border: 2px solid getColor(active);
+}
