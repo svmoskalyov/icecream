@@ -4,7 +4,11 @@ body {
   color: getColor(text-primary);
   background-color: getColor(bg-body);
 
-    &.overflow {
+  &.modal-open {
+    overflow: hidden;
+  }
+
+  &.overflow {
     overflow: hidden;
   }
 }

@@ -23,12 +23,23 @@ $(".reviews__slider").slick({
   });
 })();
 
-$('.nav__link').click(function () {
-  $('.mobile-menu').removeClass('is-open');
-  $('.menu-btn').removeClass('is-open');
-  $('.page-header__btn').removeClass('active');
-  $('body').removeClass('overflow');
-});
+(() => {
+  const refs = {
+    openModalBtn: document.querySelector("[data-modal-open]"),
+    closeModalBtn: document.querySelector("[data-modal-close]"),
+    modal: document.querySelector("[data-modal]"),
+  };
+
+  refs.openModalBtn.addEventListener("click", toggleModal);
+  refs.closeModalBtn.addEventListener("click", toggleModal);
+
+  function toggleModal() {
+    document.body.classList.toggle("modal-open");
+    refs.modal.classList.toggle("is-hidden");
+    document.body.classList.toggle('overflow');
+  }
+})();
+
 (() => {
   const refs = {
     openModalBtn: document.querySelector("[data-modal-cooperation-open]"),
@@ -43,3 +54,10 @@ $('.nav__link').click(function () {
     refs.modal.classList.toggle("is-hidden-cooperation");
   }
 })();
+
+$('.nav__link').click(function () {
+  $('.mobile-menu').removeClass('is-open');
+  $('.menu-btn').removeClass('is-open');
+  $('.page-header__btn').removeClass('active');
+  $('body').removeClass('overflow');
+});
