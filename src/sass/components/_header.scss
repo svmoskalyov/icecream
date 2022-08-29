@@ -225,3 +225,220 @@
     }
   }
 }
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 20;
+
+  background-color: rgba(0, 0, 0, 0.5);
+
+  opacity: 1;
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &.is-hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+  }
+}
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1);
+
+  background-color: getColor(text-white);
+
+  @media screen and (min-width: $tablet) and (max-width: $desktop) {
+    max-width: 450px;
+    min-width: 400px;
+    max-height: 600px;
+    min-height: 570px;
+    background-image: url('/src/images/fon/fon_tabx1.png');
+    @media (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: url('/src/images/fon/fon_tabx2.png');
+    }
+  }
+
+  @media screen and (min-width: $desktop) {
+    max-width: 530px;
+    min-width: 400px;
+    max-height: 600px;
+    min-height: 560px;
+
+    background-image: url('/src/images/fon/fon_deskx1.png');
+    @media (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: url('/src/images/fon/fon_deskx2.png');
+    }
+  }
+
+  padding: 40px;
+
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  .is-hidden > & {
+    transform: translate(-50%, -50%) scale(1.1);
+  }
+
+  &__title {
+    margin: 0;
+    text-align: center;
+
+    color: getColor(text-black);
+
+    @media screen and (max-width: 1199px) {
+      @include itemTypography(700, 20px, 1.5);
+    }
+
+    @media screen and (min-width: 1200px) {
+      @include itemTypography(700, 20px, 1.15);
+      max-width: 696px;
+    }
+
+    margin-bottom: 12px;
+  }
+
+  &__field {
+    display: block;
+    margin-bottom: 10px;
+    text-align: left;
+
+    &:last-of-type {
+      margin-bottom: 40px;
+    }
+  }
+
+  &__label {
+    display: inline-block;
+    margin-bottom: 4px;
+
+    letter-spacing: 0.01em;
+
+    @include itemTypography(500, 13px, 1.1);
+
+    color: getColor(text-black);
+  }
+
+  &__textfield {
+    position: relative;
+  }
+
+  &__input,
+  &__comment {
+    padding: 0;
+    padding-left: 40px;
+    width: 100%;
+    height: 40px;
+
+    border: 1px solid getColor(accent);
+    border-radius: 4px;
+  }
+
+  &__icon {
+    position: absolute;
+    top: 50%;
+    left: 12px;
+
+    fill: getColor(text-black);
+    transform: translateY(-50%);
+
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    .modal__field:focus-within & {
+      fill: getColor(accent);
+    }
+  }
+
+  &__comment {
+    margin: 0;
+    padding: 12px 16px;
+    resize: none;
+    height: 120px;
+
+    &::placeholder {
+      font-size: 12px;
+      line-height: 1.17;
+      letter-spacing: 0.01em;
+
+      color: getColor(text-secondory);
+    }
+  }
+}
+
+.send__button {
+  position: relative;
+  margin: auto;
+  padding-left: 30px;
+  width: 120px;
+
+  text-align: left;
+
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+
+  & > .send__icon {
+    position: absolute;
+    top: 48%;
+    right: 24px;
+
+    fill: currentColor;
+    transform: translateY(-50%);
+
+    filter: drop-shadow(3px 5px 2px rgb(0, 0, 0, 0.4));
+  }
+
+  &:hover,
+  &:focus {
+    background-color: getColor(accent);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  }
+}
+
+.button-close {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+
+  height: 30px;
+  width: 30px;
+  margin: 0;
+  padding: 0;
+
+  background-color: getColor(default);
+  border: 1px solid getColor(text-white);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  border-radius: 50%;
+
+  cursor: pointer;
+
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover,
+  &:focus {
+    fill: getColor(text-white);
+    background-color: getColor(accent);
+  }
+
+  &__icon {
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    width: 100%;
+    height: 100%;
+  }
+}
