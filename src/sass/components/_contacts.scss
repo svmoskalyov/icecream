@@ -159,13 +159,8 @@
   @media screen and(min-width:$desktop) {
     margin-right: 18px;
   }
-  &:hover,
-  &:focus {
-    background-color: getColor(accent);
-  }
-  &:active {
-    background-color: getColor(active);
-  }
+@extend %background-hover;
+@extend %background-active;
 }
 .contacts__button--active {
   @include itemTypography(700, 16px, 1.25);
@@ -181,14 +176,8 @@
     @include itemTypography(600, 14px, 1.2);
     width: 158px;
   }
-  &:hover,
-  &:focus {
-    border: 2px solid getColor(accent);
-  }
-
-  &:active {
-    border: 2px solid getColor(active);
-  }
+@extend %hover-border;
+@extend %active-border;
 }
 .contacts__item--button {
   @media screen and(min-width:$tablet) {

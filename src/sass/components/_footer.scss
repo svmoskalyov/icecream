@@ -113,13 +113,8 @@
     width: 34px;
     height: 34px;
   }
-  &:hover,
-  &:focus {
-    background-color: getColor(accent);
-  }
-  &:active {
-    background-color: getColor(text-time);
-  }
+ @extend %background-hover;
+ @extend %background-active;
 }
 .social__icon {
   fill: getColor(text-primary);
@@ -139,6 +134,7 @@
   justify-content: flex-end;
   &--text {
     color: getColor(text-secondory);
+    margin-right: 5px;
   }
   @media screen and(max-width:$tablet) {
     @include itemTypography(700, 12px, 1.5);
