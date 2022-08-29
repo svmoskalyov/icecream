@@ -136,8 +136,8 @@
         left: 565px;
         bottom: -94px;
     }
-
 }
+
 
 .hero__bkg {
     z-index: -1;
@@ -169,6 +169,7 @@
         bottom: 61px;
     }
 
+        animation: rotateWithOrigin 10000ms linear 1000ms infinite;
 }
 
 .container__hero {
