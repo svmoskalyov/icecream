@@ -29,3 +29,17 @@ $('.nav__link').click(function () {
   $('.page-header__btn').removeClass('active');
   $('body').removeClass('overflow');
 });
+(() => {
+  const refs = {
+    openModalBtn: document.querySelector("[data-modal-cooperation-open]"),
+    closeModalBtn: document.querySelector("[data-modal-cooperation-close]"),
+    modal: document.querySelector("[data-modal-cooperation]"),
+  };
+
+  refs.openModalBtn.addEventListener("click", toggleModal);
+  refs.closeModalBtn.addEventListener("click", toggleModal);
+
+  function toggleModal() {
+    refs.modal.classList.toggle("is-hidden");
+  }
+})();
