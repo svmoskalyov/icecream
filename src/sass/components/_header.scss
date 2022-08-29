@@ -384,10 +384,27 @@
   margin: auto;
   padding-left: 30px;
   width: 120px;
+  height: 42px;
 
+  @include itemTypography(600, 14px, 1.21);
   text-align: left;
+  color: getColor(text-black);
+  background-color: getColor(default);
 
+  border: 0ch;
+  border-radius: 10px;
+  cursor: pointer;
+
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+
+  @media screen and (min-width: $tablet) {
+    margin-left: 90px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    margin-left: 160px;
+  }
 
   & > .send__icon {
     position: absolute;
