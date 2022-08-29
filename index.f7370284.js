@@ -1,2 +1,0 @@
-$(".reviews__slider").slick({infinite:!0,arrows:!1,autoplay:!0,dots:!0}),(()=>{const e=document.querySelector("[data-menu-button]"),t=document.querySelector("[data-menu]"),s=document.querySelector("[ph-btn]");e.addEventListener("click",(()=>{const a="true"===e.getAttribute("aria-expanded")||!1;e.classList.toggle("is-open"),e.setAttribute("aria-expanded",!a),t.classList.toggle("is-open"),s.classList.toggle("active")}))})();
-//# sourceMappingURL=index.f7370284.js.map

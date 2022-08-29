@@ -1,2 +1,0 @@
-!function(){var e,t,a;$(".reviews__slider").slick({infinite:!0,arrows:!1,autoplay:!0,dots:!0}),e=document.querySelector("[data-menu-button]"),t=document.querySelector("[data-menu]"),a=document.querySelector("[ph-btn]"),e.addEventListener("click",(function(){var i="true"===e.getAttribute("aria-expanded")||!1;e.classList.toggle("is-open"),e.setAttribute("aria-expanded",!i),t.classList.toggle("is-open"),a.classList.toggle("active")}))}();
-//# sourceMappingURL=index.f0c2a5e3.js.map
