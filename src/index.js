@@ -52,6 +52,7 @@ $(".reviews__slider").slick({
 
   function toggleModal() {
     refs.modal.classList.toggle("is-hidden-cooperation");
+        document.body.classList.toggle('overflow');
   }
 })();
 
@@ -73,5 +74,6 @@ $('.nav__link').click(function () {
 
   function toggleModal() {
     refs.modal.classList.toggle("is-hidden-map");
+        document.body.classList.toggle('overflow');
   }
 })();
