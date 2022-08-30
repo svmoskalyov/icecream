@@ -8,7 +8,7 @@ $(".reviews__slider").slick({
 (() => {
   const menuBtnRef = document.querySelector("[data-menu-button]");
   const mobileMenuRef = document.querySelector("[data-menu]");
-  const mobilePhBtn = document.querySelector("[ph-btn]");
+  const mobilePhBtn = document.querySelector("[data-ph-btn]");
   
   menuBtnRef.addEventListener("click", () => {
     const expanded =
