@@ -204,6 +204,7 @@
   }
 
   &__link {
+    display: block;
     padding: 16px 0;
     @include itemTypography(700, 32px, 1.22);
 
