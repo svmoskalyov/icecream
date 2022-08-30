@@ -237,24 +237,26 @@ background-repeat: no-repeat;
 }
 .backdrop-cooperation__button {
   @include centeredFlex;
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
-  padding: 0;
-  margin-top: 8px;
-  margin-bottom: 0;
-  margin-left: auto;
-  margin-right: 8px;
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  cursor: pointer;
-  right: 0;
-  top: 0;
-  background-color: getColor(default);
-  fill: getColor(text-black);
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    @extend %background-hover;
-    @extend %background-active;
-  border: 0;
+    width: 30px;
+    height: 30px;
+    margin-top: 8px;
+    margin-bottom: 0;
+    margin-left: auto;
+    margin-right: 8px;
+    transition: background-color fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    cursor: pointer;
+    border: 0;
+    padding: 0;
+    background-color: getColor(default);
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    border-radius: 50%;
+    cursor: pointer;
+  
+    &:hover,
+    &:focus {
+      fill: getColor(text-white);
+      background-color: getColor(accent);
+    }
 }
 .form-modal {
   padding-bottom: 40px;
@@ -343,28 +345,45 @@ padding-left: 30px;
 
 .form-modal__button {
   cursor: pointer;
-  @include centeredFlex();
-  width: 150px;
-  height: 35px;
-  margin: 0 auto;
-  padding: 0;
-  @include itemTypography(500, 16px, 1.25);
-  color: getColor(text-black);
-  background-color: getColor(default);
-  border: 0;
-  border-radius: 15px;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  @include centeredFlex();
-  text-align: center;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  @extend %background-hover;
-  @extend %background-active;
-  margin-top: 25px;
-  @media screen and(min-width:$tablet) {
-    width: 192px;
-    height: 40px;
-  }
+  position: relative;
+        margin: auto;
+        width: 140px;
+        height: 42px;
+    @include centeredFlex;
+        text-align: center;
+        color: getColor(text-black);
+        background-color: getColor(default);
+    margin-top: 10px;
+        border: 0ch;
+        border-radius: 10px;
+        cursor: pointer;
+    &:hover,
+      &:focus {
+        background-color: getColor(accent);
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+      }
+        transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+        filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    
+        @media screen and (min-width: $tablet) {
+      
+          @include itemTypography(500, 16px, 1.25);
+        }
+    
+        @media screen and (min-width: $desktop) {
+        
+          @include itemTypography(600, 14px, 1.29);
+        }
 }
+    .form-modal__button > .form-modal__send {
+      position: absolute;
+      top: 48%;
+      right: 24px;
+      fill: currentColor;
+      transform: translateY(-50%);
+  margin-left: 5px;
+      filter: drop-shadow(3px 5px 2px rgb(0, 0, 0, 0.4));
+   }
 .backdrop-map {
   position: fixed;
   top: 50%;
@@ -409,23 +428,25 @@ background-color: getColor(text-white);
   @include centeredFlex;
   width: 30px;
   height: 30px;
-  border-radius: 50%;
-  padding: 0;
   margin-top: 8px;
   margin-bottom: 8px;
   margin-left: auto;
   margin-right: 8px;
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
   cursor: pointer;
-  right: 0;
-  top: 0;
-  background-color: getColor(default);
-  fill: getColor(text-black);
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  @extend %background-hover;
-  @extend %background-active;
   border: 0;
-}
+      padding: 0;
+      background-color: getColor(default);
+      filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+      border-radius: 50%;
+      cursor: pointer;
+      &:hover,
+      &:focus {
+        fill: getColor(text-white);
+        background-color: getColor(accent);
+      }
+    }
+
 .backdrop-map__iframe{
   top: 50%;
     left: 50%;
@@ -455,3 +476,10 @@ background-color: getColor(text-white);
         @include itemTypography(700, 16px, 1.83);
       }
 }
+    .backdrop__icon {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 100%;
+      height: 100%;
+    }
