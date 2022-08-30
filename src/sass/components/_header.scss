@@ -382,11 +382,10 @@
 .send__button {
   position: relative;
   margin: auto;
-  padding-left: 30px;
-  width: 120px;
+  padding-left: 40px;
+  width: 140px;
   height: 42px;
 
-  @include itemTypography(600, 14px, 1.21);
   text-align: left;
   color: getColor(text-black);
   background-color: getColor(default);
@@ -400,10 +399,12 @@
 
   @media screen and (min-width: $tablet) {
     margin-left: 90px;
+    @include itemTypography(500, 16px, 1.25);
   }
 
   @media screen and (min-width: $desktop) {
     margin-left: 160px;
+    @include itemTypography(600, 14px, 1.29);
   }
 
   & > .send__icon {
@@ -435,7 +436,7 @@
   padding: 0;
 
   background-color: getColor(default);
-  border: 1px solid getColor(text-white);
+  border: 0;
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
   border-radius: 50%;
 
