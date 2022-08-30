@@ -43,7 +43,9 @@
                 }
             }
 }
-
+.reviews__title--hidden {
+    @extend %visually-hidden;
+}
 .reviews__container {
     max-width: $mobile;
     margin: 0 auto;
