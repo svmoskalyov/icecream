@@ -132,24 +132,28 @@
   display: flex;
   align-items: flex-end;
   justify-content: flex-end;
-  &--text {
-    color: getColor(text-secondory);
-    margin-right: 5px;
-  }
   @media screen and(max-width:$tablet) {
-    @include itemTypography(700, 12px, 1.5);
-    margin-top: 40px;
-    margin-bottom: 40px;
-  }
-  @media screen and(min-width:$tablet) {
-    @include itemTypography(700, 14px, 1.8);
-    margin-top: 32px;
-    margin-bottom: 0;
-  }
-  @media screen and(min-width:$desktop) {
-    @include itemTypography(700, 16px, 1.8);
-  }
+      @include itemTypography(700, 12px, 1.5);
+      margin-top: 40px;
+      margin-bottom: 40px;
+    }
+  
+    @media screen and(min-width:$tablet) {
+      @include itemTypography(700, 14px, 1.8);
+      margin-top: 32px;
+      margin-bottom: 0;
+    }
+  
+    @media screen and(min-width:$desktop) {
+      @include itemTypography(700, 16px, 1.8);
+    }
 }
+ .footer__span {
+   color: getColor(text-secondory);
+   margin-right: 5px;
+ }
+
+ 
 .footer__decor {
   border-top: 1px solid #e1e1e1;
 }
