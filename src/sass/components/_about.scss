@@ -155,3 +155,151 @@
     margin-left: 600px;
   }
 }
+
+.backdrop-about {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  background-color: rgba(0, 0, 0, 0.2);
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 2;
+  transform: translate(-50%, -50%);
+  border-radius: 10px;
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: cover;
+  background-image: url(../images/reviews/icecream-bcg.png),
+    linear-gradient(to bottom, #f5f5f5 24px, #f5f5f5 100%);
+}
+.backdrop-about__modals {
+  width: 100%;
+
+  @media screen and(min-width: $tablet) {
+    width: 350px;
+    min-height: 350px;
+  }
+  @media screen and(min-width: $desktop) {
+    width: 450px;
+    min-height: 450px;
+  }
+}
+.backdrop-about.is-hidden-about {
+  opacity: 0;
+  pointer-events: none;
+  overflow: visible;
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.backdrop-about.is-hidden-about .backdrop-about__modal {
+  transform: translate(-50%, -50%);
+}
+.backdrop-about__button {
+  @include centeredFlex;
+  width: 30px;
+  height: 30px;
+  margin-top: 8px;
+  margin-bottom: 0;
+  margin-left: auto;
+  margin-right: 8px;
+  transition: background-color fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+  border: 0;
+  padding: 0;
+  background-color: getColor(default);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  border-radius: 50%;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    fill: getColor(text-white);
+    background-color: getColor(accent);
+  }
+}
+.form-modal {
+  padding-bottom: 40px;
+  padding-left: 40px;
+  padding-right: 40px;
+  margin-left: auto;
+  margin-right: auto;
+  &__title {
+    @include itemTypography(700, 16px, 1.83);
+    letter-spacing: 0.03em;
+    margin: 0 auto 12px auto;
+    color: getColor(text-black);
+    text-align: center;
+  }
+}
+
+.form-modal__icon {
+  position: absolute;
+  top: -5px;
+  left: 12px;
+  transform: translateY(160%);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  @media screen and(min-width:$tablet) {
+    top: 0;
+  }
+}
+
+.form-modal__text {
+  text-align: left;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.76;
+  letter-spacing: 0.04em;
+  color: black;
+  @media screen and(min-width: $desktop) {
+    font-size: 14px;
+  }
+}
+.form-modal__text-more {
+  display: none;
+  font-size: 12px;
+  @media screen and(min-width: $tablet) {
+    margin-top: 0;
+    display: block;
+    text-align: left;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.76;
+    letter-spacing: 0.04em;
+    color: black;
+    margin-bottom: 14px;
+    margin-bottom: 14px;
+  }
+  @media screen and(min-width: $desktop) {
+    font-size: 14px;
+  }
+}
+
+.form-modal__button-about {
+  cursor: pointer;
+  position: relative;
+  margin: auto;
+  @include centeredFlex;
+  text-align: center;
+  background-color: #f8d24e;
+  margin-top: 10px;
+  border: 0ch;
+  border-radius: 10px;
+  padding: 14px 36px;
+  cursor: pointer;
+  &:hover,
+  &:focus {
+    background-color: getColor(accent);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  }
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+.form-modal__button-about > .form-modal__send {
+  position: absolute;
+  top: 48%;
+  right: 24px;
+  fill: currentColor;
+  transform: translateY(-50%);
+  margin-left: 5px;
+  filter: drop-shadow(3px 5px 2px rgb(0, 0, 0, 0.4));
+}
