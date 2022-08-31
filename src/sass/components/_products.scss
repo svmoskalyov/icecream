@@ -72,8 +72,8 @@
 
 .products__item {
   margin: 0 auto;
-  width: 280px;
-  height: 420px;
+  max-width: 280px;
+  min-height: 420px;
   background: #aec6a5;
   border-radius: 24px;
   // padding: 0 40px;
@@ -82,9 +82,12 @@
   padding-right: 40px;
   position: relative;
   margin-top: 148px;
+  // @media screen and (min-width: $mobile) {
+  //   width: 280px;
+  // }
   @media screen and (min-width: $tablet) {
-    width: 224px;
-    height: 428px;
+    max-width: 224px;
+    min-height: 428px;
     margin-top: 200px;
     margin-right: 16px;
     padding: 0 26px;
@@ -93,8 +96,8 @@
     }
   }
   @media screen and (min-width: $desktop) {
-    width: 368px;
-    height: 535px;
+    max-width: 368px;
+    min-height: 535px;
     margin-top: 303px;
     margin-right: 32px;
     padding: 0 64px;
