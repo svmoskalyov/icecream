@@ -130,6 +130,7 @@
     left: 0;
     right: 0;
     margin: 0 auto;
+    z-index: -1;
 
 
     @media screen and (min-width: $tablet) {
@@ -146,7 +147,7 @@
 }
 
 .hero__bkg {
-    z-index: -1;
+    z-index: -2;
     position: absolute;
     bottom: 0;
     left: 0;
@@ -211,7 +212,6 @@
         font-size: 28px;
         line-height: 1.21;
         letter-spacing: 0.04em;
-        // text-align: right;
 
         @media screen and (min-width: $desktop) {
             font-size: 46px;
@@ -223,7 +223,6 @@
         font-weight: 400;
         font-size: 8px;
         line-height: 10px;
-        // text-align: right;
 
         @media screen and (min-width: $desktop) {
             font-size: 14px;
@@ -236,61 +235,9 @@
 
 }
 
-// .container__hero {
-//     position: relative;
-// }
-
-// .hero__shop {
-
-//     @media screen and (max-width: $tablet) {
-//         display: none;
-//     }
-
-//     display: flex;
-//     flex-direction: column;
-//     justify-content: end;
-//     position: absolute;
-//     right: 0;
-//     top: 50px;
-// }
-
-// .hero__shop-list:not(:last-child) {
-//     margin-bottom: 20px;
-// }
-
-// .hero__shop-list--cafe {
-//     margin-left: 14px;
-//     @media screen and (min-width: $desktop) {
-//         margin-left: 27px;
-//     }
-
-// }
-
-// .hero__shop-list--tablet {
-//     @media screen and (min-width: $tablet) {
-//         display: block;
-//     }
-//     @media screen and (min-width: $desktop) {
-//         display: none;
-//     }
-// }
-
-// .hero__shop-list--desktop {
-
-//     @media screen and (min-width: $tablet) {
-//         display: none;
-
-//     }
-
-//     @media screen and (min-width: $desktop) {
-//         display: block;
-//         }
-// }
-
 
 .hero__paragraph {
     position: absolute;
-    z-index: 2;
 
     @media screen and (max-width: $tablet) {
         display: none;
